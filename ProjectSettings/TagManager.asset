@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pared
+  - Bala Player
+  - Enemigo
   layers:
   - Default
   - TransparentFX
