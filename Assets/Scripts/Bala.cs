@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bala : MonoBehaviour
 {
     public float speed = 10f;
-    public float lifetime = 3f;
+    public float lifetime = 0.5f;
     private Rigidbody2D rb;
 
     private void Start()

@@ -5,7 +5,7 @@ using UnityEngine;
 public class BalaEnemigo : MonoBehaviour
 {
     public float velocidad = 10f;
-    public float tiempoVida = 3f;
+    public float tiempoVida = 1f;
 
     void Start()
     {
@@ -14,7 +14,7 @@ public class BalaEnemigo : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.Translate(Vector3.up * velocidad * Time.deltaTime);
+        transform.Translate(Vector3.down * velocidad * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D other)
