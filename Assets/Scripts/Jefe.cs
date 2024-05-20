@@ -5,31 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class Jefe : MonoBehaviour
 {
-    public float moveSpeed = 1f;
-    public float tiempoDestruccion = 0f;
-    public float fireRate = 1f;
-    public GameObject bulletPrefab;
-    public int maxHealth = 10;
-    public float detectionRange = 10f;
     public Transform player;
-    public CanvasHPJefe bossHealthBar;
+    public float moveSpeed = 2f;
+    public GameObject bulletPrefab;
+    public float fireRate = 1f;
+    public float detectionRange = 10f;
+    public int maxHealth = 10;
     private int currentHealth;
     private bool isActive = false;
     private float nextFireTime = 0f;
 
     void Start()
     {
-        currentHealth = maxHealth;
-        bossHealthBar.UpdateHealthBar(currentHealth);
+        currentHealth = maxHealth;        
     }
 
     void Update()
     {
         if (isActive)
-        {            
+        {
             Vector3 targetPosition = new Vector3(player.position.x, transform.position.y, transform.position.z);
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime); 
-            
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+
             if (Time.time > nextFireTime)
             {
                 Shoot();
@@ -44,38 +41,38 @@ public class Jefe : MonoBehaviour
             }
         }
     }
+
     void Shoot()
     {
         Instantiate(bulletPrefab, transform.position, Quaternion.identity);
     }
 
-    void OnTriggerEnter2D(Collider2D otro)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (otro.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             isActive = true;
         }
 
-        else if (otro.CompareTag("Bala Player"))
+        if (other.CompareTag("Bala Player"))
         {
             TakeDamage(1);
-            Destroy(otro.gameObject);
+            Destroy(other.gameObject);
         }
     }
-
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        bossHealthBar.UpdateHealthBar(currentHealth);
+
         if (currentHealth <= 0)
         {
-            DestruirEnemigo();
+            Die();
         }
     }
 
-    void DestruirEnemigo()
+    void Die()
     {
-        Destroy(gameObject, tiempoDestruccion);
+        Destroy(gameObject);
         SceneManager.LoadScene(2);
     }
 }

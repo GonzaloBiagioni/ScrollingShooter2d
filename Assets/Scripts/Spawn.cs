@@ -16,7 +16,7 @@ public class Spawn : MonoBehaviour
 
     void SetRandomSpawnTime()
     {
-        spawnTime = Random.Range(1f, 5f); 
+        spawnTime = Random.Range(0f, 3f); 
     }
 
     void SpawnEnemy()
