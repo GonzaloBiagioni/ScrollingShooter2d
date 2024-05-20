@@ -24,7 +24,8 @@ public class CanvasManager : MonoBehaviour
 
         if (hp == 0)
         {
-            SceneManager.LoadScene(4);
+            AudioManager.Instance.PlaySFX(2);
+            SceneManager.LoadScene(3);
         }
 
         canvas.DesactivarHP(hp);

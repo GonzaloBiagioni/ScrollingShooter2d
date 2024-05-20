@@ -12,6 +12,7 @@ public class ConsumibleHP : MonoBehaviour
 
             if (Vidarecuperada)
             {
+                AudioManager.Instance.PlaySFX(3);
                 Destroy(this.gameObject);
             }
         }

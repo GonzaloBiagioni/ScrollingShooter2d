@@ -29,6 +29,7 @@ public class Jefe : MonoBehaviour
 
             if (Time.time > nextFireTime)
             {
+                AudioManager.Instance.PlaySFX(1);
                 Shoot();
                 nextFireTime = Time.time + fireRate;
             }
@@ -72,6 +73,7 @@ public class Jefe : MonoBehaviour
 
     void Die()
     {
+        AudioManager.Instance.PlaySFX(2);
         Destroy(gameObject);
         SceneManager.LoadScene(2);
     }

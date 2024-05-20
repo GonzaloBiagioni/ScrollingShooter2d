@@ -7,6 +7,10 @@ public class EnemigoMina : MonoBehaviour
     public float moveSpeed = 0.5f;
     public GameObject prefabMoneda;
     public float tiempoDestruccion = 0f;
+    private void Start()
+    {
+        Destroy(gameObject, 22f);
+    }
     void Update()
     {
         transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
@@ -42,6 +46,7 @@ public class EnemigoMina : MonoBehaviour
     }
     void DestruirEnemigo()
     {
+        AudioManager.Instance.PlaySFX(2);
         Destroy(gameObject, tiempoDestruccion);
     }
 }
