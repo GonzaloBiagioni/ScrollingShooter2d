@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3432629644147456120}
   - component: {fileID: 2341056261453687322}
-  - component: {fileID: 7256964046299052994}
   - component: {fileID: 8274840801969305103}
   m_Layer: 0
-  m_Name: ConsumibleHP
+  m_Name: HP Jefe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -646012980, guid: 9b42ace888875d04584b805d0a5277e5, type: 3}
-  m_Color: {r: 0.026666403, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.8301887, g: 0.27020293, b: 0.27020293, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -86,18 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7256964046299052994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7176338715211823137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12d5303fb32b3fd4885164ad4b6c1215, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &8274840801969305103
 BoxCollider2D:
   m_ObjectHideFlags: 0

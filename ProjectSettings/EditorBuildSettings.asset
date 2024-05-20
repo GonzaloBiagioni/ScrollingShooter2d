@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/EscenaMenu.unity
+    guid: 2f6bd4665e7d88e47a0954d8f7dedc68
+  - enabled: 1
     path: Assets/Scenes/EscenaJuego.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/EscenaVictoria.unity
+    guid: ecbfd3a4cd9fbf34a9ee6651a4256727
+  - enabled: 1
+    path: Assets/Scenes/EscenaDerrota.unity
+    guid: 5a69ab421993a9046977d728c75d18dd
   m_configObjects: {}
